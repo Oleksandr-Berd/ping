@@ -3,5 +3,6 @@ export type Data = {
 }
 
 export interface IProps {
-  handleSubmit: (data:Data) => void;
+  handleSubmit: (data: Data) => void;
+  user?: Data| null
 }
