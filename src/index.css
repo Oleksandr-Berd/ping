@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  background-color: #F2F2F2;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -11,3 +12,29 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* @font-face {
+  font-family: "IBMbold";
+  src: local("IBM"),
+    url("./assets/fonts/IBM_Plex_Sans/IBMPlexSans-Bold.ttf") format("truetype");
+} */
+
+ul, nav{
+list-style:none;
+padding: 0;
+margin:0;
+}
+h1, h2, h3, h4, h5, h6, p{
+margin:0;
+}
+a{
+text-decoration: none;
+}
+input{
+box-sizing:border-box;
+}
+img{
+display:block;
+box-sizing:border-box;
+}
+button{
+border:none}
