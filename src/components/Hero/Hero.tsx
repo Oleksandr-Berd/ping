@@ -1,4 +1,7 @@
 import { useEffect, useState } from "react";
+
+import * as SC from "./HeroStyled"
+
 import HeroContent from "./HeroContent";
 import HeroForm from "./HeroForm";
 import { Data } from "../../utils/interfaces";
@@ -26,11 +29,11 @@ const Hero: React.FC = () => {
   }, [user]);
 
   return (
-    <div>
+    <SC.HeroCon>
       <Logo/>
       <HeroContent />
       <HeroForm handleSubmit={handleSubmit} />
-    </div>
+    </SC.HeroCon>
   );
 };
 

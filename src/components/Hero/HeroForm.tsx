@@ -1,4 +1,9 @@
+
+
 import { ErrorMessage, Field, Formik, Form } from "formik";
+
+import * as SC from "./HeroStyled"
+
 import { validSchema } from "../../utils/validSchema";
 import { IProps } from "../../utils/interfaces";
 
@@ -9,23 +14,31 @@ const HeroForm: React.FC<IProps> = ({ handleSubmit }) => {
       validationSchema={validSchema}
       onSubmit={(values, { setSubmitting, resetForm }) => {
         console.log(values);
-        
+
         handleSubmit(values);
         resetForm();
         setSubmitting(false);
       }}
     >
-      {({ isSubmitting }) => (
-        <Form>
-          <div>
-            <Field type="email" name="email" />
+      {({ isSubmitting, touched, errors }) => (
+        <Form noValidate>
+          <SC.InputCon>
+            <Field
+              type="email"
+              name="email"
+              placeholder="example@mail.com"
+              style={{
+                borderColor:
+                  touched.email && errors.email ? "#FF5466" : "#C2D3FF",
+              }}
+            />
             <ErrorMessage name="email">
               {(msg) => (msg ? <p>{msg}</p> : null)}
             </ErrorMessage>
-          </div>
-          <button type="submit" disabled={isSubmitting}>
+          </SC.InputCon>
+          <SC.SubmitButton type="submit" disabled={isSubmitting}>
             Notify Me
-          </button>
+          </SC.SubmitButton>
         </Form>
       )}
     </Formik>
