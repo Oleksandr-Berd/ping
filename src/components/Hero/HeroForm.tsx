@@ -22,23 +22,25 @@ const HeroForm: React.FC<IProps> = ({ handleSubmit }) => {
     >
       {({ isSubmitting, touched, errors }) => (
         <Form noValidate>
-          <SC.InputCon>
-            <Field
-              type="email"
-              name="email"
-              placeholder="example@mail.com"
-              style={{
-                borderColor:
-                  touched.email && errors.email ? "#FF5466" : "#C2D3FF",
-              }}
-            />
-            <ErrorMessage name="email">
-              {(msg) => (msg ? <p>{msg}</p> : null)}
-            </ErrorMessage>
-          </SC.InputCon>
-          <SC.SubmitButton type="submit" disabled={isSubmitting}>
-            Notify Me
-          </SC.SubmitButton>
+          <SC.FormCon>
+            <SC.InputCon>
+              <Field
+                type="email"
+                name="email"
+                placeholder="example@mail.com"
+                style={{
+                  borderColor:
+                    touched.email && errors.email ? "#FF5466" : "#C2D3FF",
+                }}
+              />
+              <ErrorMessage name="email">
+                {(msg) => (msg ? <p>{msg}</p> : null)}
+              </ErrorMessage>
+            </SC.InputCon>
+            <SC.SubmitButton type="submit" disabled={isSubmitting}>
+              Notify Me
+            </SC.SubmitButton>
+          </SC.FormCon>
         </Form>
       )}
     </Formik>

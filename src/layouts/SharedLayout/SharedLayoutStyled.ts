@@ -9,4 +9,10 @@ export const SharedLayoutCustom = styled.div`
   justify-content: center;
 
   font-family: "LibreFranklin";
+
+  @media (min-width: 1280px){
+    height: auto;
+
+    margin-top: 80px;
+  }
 `;
