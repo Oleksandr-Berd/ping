@@ -12,11 +12,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-/* @font-face {
-  font-family: "IBMbold";
-  src: local("IBM"),
-    url("./assets/fonts/IBM_Plex_Sans/IBMPlexSans-Bold.ttf") format("truetype");
-} */
+@font-face {
+  font-family: "LibreFranklin";
+  src: local("LibreFranklin"),
+    url("./assets/fonts/Libre_Franklin/LibreFranklin-VariableFont_wght.ttf") format("truetype");
+}
 
 ul, nav{
 list-style:none;

@@ -3,6 +3,7 @@ import HeroContent from "./HeroContent";
 import HeroForm from "./HeroForm";
 import { Data } from "../../utils/interfaces";
 import { toast } from "react-toastify";
+import Logo from "../Logo/Logo";
 
 const Hero: React.FC = () => {
   const [user, setUser] = useState<Data | null>(null);
@@ -26,6 +27,7 @@ const Hero: React.FC = () => {
 
   return (
     <div>
+      <Logo/>
       <HeroContent />
       <HeroForm handleSubmit={handleSubmit} />
     </div>

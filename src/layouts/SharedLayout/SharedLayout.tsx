@@ -1,11 +1,13 @@
+import * as SC from "./SharedLayoutStyled"
+
 import Hero from "../../components/Hero/Hero";
 
 const SharedLayout = () => {
    
   return (
-    <div>
+    <SC.SharedLayoutCustom>
       <Hero />
-    </div>
+    </SC.SharedLayoutCustom>
   );
 };
 
